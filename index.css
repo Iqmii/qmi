@@ -327,7 +327,10 @@ img {
        font-style: normal;
     }
     .description {
-     font-size: 15px;
+     font-size: 6px;
+    }
+    .aaa {
+        font-size: 8px;
     }
     .haupt-columns1 {
         display: flex;
