@@ -1,633 +1,91 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    background-color: black;
-    width: 100%;
-    height: 100em;
-}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qmi</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="Ваш гід у світі корейських дорам! Дізнайтеся більше про найкращі серіали, рецензії, рекомендації та новинки. Захоплюючі сюжети, романтика, кримінал і драма — все це на нашому сайті про корейські дорами.">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Дорама, Дорами, дорами, liqmil, україньською">
+</head>
+<body>
+    <main>
+        <div class="search">
+            <h3>🔍</h3>
+            <a class="lupa">Search</a>
+        </div>
+        <div class="haupt-columns">
+            <div class="image-block">
+              <img src="https://qmi-qmi-qmi.s3.eu-north-1.amazonaws.com/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D0%B0+%D1%81%D0%BB%D0%B5%D0%B7+_+Queen+of+Tears+2024.jpg">
+            </div>
+            <div class="text-block">
+                 <div class="block-title">
+                     <h2 class="pan-ivan">Королева сліз</h2>
+                 </div>
+                 <div class="block-text-description">
+                    <a class="qmii">Жанри:</a>
+                    <a class="qmi"> Романтика, Драма, Мелодрама, Комедія</a>
+                    
+                 </div>
+                 <div class="block-button"  href="index1.html" onclick="window.location.href='index1.html';">
+                     <h3>Дізнатися Більше</h3>
+                 </div>
+                 <div class="description">
+                    <a class="aaa">
+                       
+                    </a>
+                </div>
+            </div>
+        </div>
 
-main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
+         <div class="haupt-columns1"> 
+            <div class="image-block1">
+                <img src="https://qmi-qmi-qmi.s3.eu-north-1.amazonaws.com/__My+Name__.jpg">
+            </div>
+            <div class="text-block1-animation">
+                 <div class="block-title1">
+                     <h2>Пан Іван і Пан Патрон</h2>
+                 </div>
+                 <div class="block-text-description1">
+                    <a>Травку Курять</a>
+                 </div>
+                 <div class="block-button1" onclick="playMovie()">
+                    <h3> Play</h3>
+                 </div>
+                        
+                    </div>
+                 </div>
+            </div>
+        </div> 
 
-}
-.search {
-    background-position: center;
-    display: flex;
-    background-color: rgba(61, 3, 3, 0.842);
-    width: 72.5%;
-    height: 4vh;
-    margin: 1em;
-    border-radius: 0.3em;
-    
-    box-shadow: 1em rgba(139, 3, 3, 0.507);
-
-}
-.lupa {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1em; 
-  font-style: normal;
-  color: #885959;
-  -webkit-text-stroke: #020202 0.01px;
-
-
-}
-.haupt-columns {
-    display: flex;
-    width: 100%;
-    height: 65vh;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin-top: 0;
-   
-}
-.image-block {
-   width: 20%;
-   height: auto;
-   margin: 1em;
-}
-img {
-    width: auto;
-    height: auto;
-}
-.text-block {
-    float: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width:50%;
-    height: 100%;
-    color: #ffffff;
-    gap: 1em;
-    box-sizing: border-box;
-    
-}
-.block-title {
-    width: 100%;
-    height: 25%;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.block-text-description {
-    display: flex;
-    justify-content: left;
-    justify-content: flex-start;
-    gap: 3em;
-    
-   
-}
-
-.block-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: crimson;
-    width: 60%;
-    height: 3vh;
-    border-radius: 1em;
-    
-    
-
-}
-
-.a11 {
-    
-    background-size: auto;
-    justify-content: center;
-}
-.description {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 0.5em;
-    border: 0.1em solid rgb(29, 7, 7);
-    background-color: rgb(20, 10, 10);
-    border-radius: 0.5em;
-    box-shadow: 3em rebeccapurple;
-
-}
-a {
-    margin: 0.3em;
-}
-
-.haupt-columns1 {
-    display: flex;
-    width: 100%;
-    height: 65vh;
-    box-sizing: border-box;
-    
-  
-} 
-.image-block1 {
-   width: 20%;
-   height: auto;
-   margin: 1em;
-}
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5em;
-}
-.text-block1-animation {
-    float: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width:50%;
-    height: 100%;
-    color: #ffffff;
-    gap: 1em;
-    
-}
-.block-title1 {
-    width: 100%;
-    height: 25%;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.block-text-description1 {
-    display: flex;
-    justify-content: left;
-    justify-content: flex-start;
-    gap: 3em;
-   
-}
-
-.block-button1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: crimson;
-    width: 60%;
-    height: 3vh;
-    border-radius: 1em;
-    
-    
-
-}
-
-.a12 {
-    
-    background-size: auto;
-    justify-content: center;
-    
-}
+        <div class="haupt-columns2"> 
+            <div class="image-block2">
+                <img src="https://qmi-qmi-qmi.s3.eu-north-1.amazonaws.com/poster+when+the+phone+rings.jpg">
+            </div>
+            <div class="text-block2-animation">
+                 <div class="block-title2">
+                     <h2>Пан Іван і Пан Патрон</h2>
+                 </div>
+                 <div class="block-text-description2">
+                    <a>Травку Курять</a>
+                 </div>
+                 <div class="block-button2" onclick="playMovie()">
+                    <h3> Play</h3>
+                 </div>
+                        
+                    </div>
+                 </div>
+            </div>
+        </div> 
 
 
-
-.haupt-columns2 {
-    display: flex;
-    width: 100%;
-    height: 65vh;
-    box-sizing: border-box;
-   
-}
-.image-block2 {
-   width: 20%;
-   height: auto;
-   margin: 1em;
-}
-.text-block2-animation {
-    float: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width:50%;
-    height: 100%;
-    color: #ffffff;
-    gap: 1em;
-    
-}
-.block-title2 {
-    width: 100%;
-    height: 25%;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.block-text-description2 {
-    display: flex;
-    justify-content: left;
-    justify-content: flex-start;
-    gap: 3em;
-   
-}
-
-.block-button2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: crimson;
-    width: 60%;
-    height: 3vh;
-    border-radius: 1em;
-    
-    
-
-}
-
-
-
-
-
-
-@media only screen and (max-width:415px) {
-    body { 
-        background-color: black;
-        width: 100%;
-        height: 100em;
-    }
-
-
-    main {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-    }
-    .search {
-        width: 90%;
-    }
-    
-    .haupt-columns {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 100%;
-        height: 45vh;
-        box-sizing: border-box;
+       <!-- <div class="Email" >
+            <img src="https://th.bing.com/th?id=OIP.0FuwdoOekVCgwUBFjm654QHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" >
+        </div>
+            <a class="email2">bilousdavid1910@gmail.com</a>-->
         
-    } 
-    .image-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        width: 50%;
-        height: 85%;
-        
-     }
-     img {
-        width: 100%;
-        height: auto;
-        border-radius: 0.5em;
-    }
-     .text-block {
-        float: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width:40%;
-        height: 100%;
-        color: #ffffff;
-        gap: 1em;
-        
-    }
-    .block-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        width: 80%;
-        height: 40%;
-        color: aliceblue;
-        display: flex;
-        
-    }
-    .block-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: crimson;
-        width: 95%;
-        height: 1.8vh;
-        border-radius: 0.8em;
-    }
-    h2  {
-        font-size: 12px;
-    }
-
-    a {
-        font-size: 0.5em;
-    }
-    
-    h3 {
-       font-size: 0.5em;
-       font-style: normal;
-    }
-    .description {
-     font-size: 6px;
-    }
-    .aaa {
-        font-size: 8px;
-    }
-    .haupt-columns1 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 100%;
-        height: 50vh;
-        box-sizing: border-box;
-        
-    } 
-    .image-block1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        width: 50%;
-        height: 85%;
-        
-     }
-     .text-block1 {
-        float: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width:40%;
-        height: 100%;
-        color: #ffffff;
-        gap: 1em;
-        
-    }
-    .block-title1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        width: 80%;
-        height: 40%;
-        color: aliceblue;
-        display: flex;
-        
-    }
-    .block-button1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: crimson;
-        width: 95%;
-        height: 1.8vh;
-        border-radius: 0.8em;
-    }
-    .haupt-columns2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 100%;
-        height: 55vh;
-        box-sizing: border-box;
-        
-    } 
-    .image-block2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        width: 50%;
-        height: 85%;
-        
-     }
-     .text-block2 {
-        float: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width:40%;
-        height: 100%;
-        color: #ffffff;
-        gap: 1em;
-        
-    }
-    .block-title2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        width: 80%;
-        height: 40%;
-        color: aliceblue;
-        display: flex;
-        
-    }
-    .block-button2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: crimson;
-        width: 95%;
-        height: 1.8vh;
-        border-radius: 0.8em;
-    }
-}
-
-
-@media only screen and (min-width:415px) and (max-width:1100px) {
-    body { 
-        background-color: black;
-        width: 100%;
-        height: 100em;
-    }
-
-
-    main {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-    }
-    .search {
-        width: 43%;
-    }
-    .haupt-columns {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 45%;
-        height: 60vh;
-        box-sizing: border-box;
-        
-    } 
-    .image-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        width: 50%;
-        height: 85%;
-        
-     }
-     img {
-        width: 100%;
-        height: auto;
-        border-radius: 0.5em;
-    }
-     .text-block {
-        float: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width:40%;
-        height: 100%;
-        color: #ffffff;
-        gap: 1em;
-        
-    }
-    .block-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        width: 80%;
-        height: 40%;
-        color: aliceblue;
-        display: flex;
-        
-    }
-    .block-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: crimson;
-        width: 95%;
-        height: 1.8vh;
-        border-radius: 0.8em;
-    }
-    h2  {
-        font-size: 12px;
-    }
-
-    a {
-        font-size: 0.5em;
-    }
-    
-    h3 {
-       font-size: 0.5em;
-       font-style: normal;
-    }
-    .description {
-        font-size: 15px;
-    }
-    .haupt-columns1 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 45%;
-        height: 60vh;
-        box-sizing: border-box;
-        
-    } 
-    .image-block1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        width: 50%;
-        height: 85%;
-        
-     }
-     .text-block1 {
-        float: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width:40%;
-        height: 100%;
-        color: #ffffff;
-        gap: 1em;
-        
-    }
-    .block-title1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        width: 80%;
-        height: 40%;
-        color: aliceblue;
-        display: flex;
-        
-    }
-    .block-button1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: crimson;
-        width: 95%;
-        height: 1.8vh;
-        border-radius: 0.8em;
-    }
-    .haupt-columns2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 45%;
-        height: 70vh;
-        box-sizing: border-box;
-        
-    } 
-    .image-block2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        width: 50%;
-        height: 85%;
-        
-     }
-     .text-block2 {
-        float: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width:40%;
-        height: 100%;
-        color: #ffffff;
-        gap: 1em;
-        
-    }
-    .block-title2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        width: 80%;
-        height: 40%;
-        color: aliceblue;
-        display: flex;
-        
-    }
-    .block-button2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: crimson;
-        width: 95%;
-        height: 1.8vh;
-        border-radius: 0.8em;
-    }
-}
-
-
-.text-block2-animation {
-    opacity: 0;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.element-show {
-    opacity: 1;
-}
-
-
-
-
-
-
-
-
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
