@@ -358,8 +358,25 @@ img {
        font-size: 0.5em;
        font-style: normal;
     }
-    .description {
-     font-size: 6px;
+
+    .qmi-block {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .qmi {
+        display: flex;
+       
+
+        font-size: 10px;
+    }
+
+    .block-text-description {
+        
+        width: 35%;
+    }
+    .qmii {
+        font-size: 13px;
     }
     .aaa {
         font-size: 8px;
