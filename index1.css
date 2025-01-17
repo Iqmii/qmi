@@ -1,6 +1,6 @@
 * {
    margin: 0;
- 
+   font-family: cursive;
 }
 body {
     
@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    background-color: rgba(108, 40, 168, 0.151);
+    background-color: rgba(161, 78, 233, 0.171);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +61,7 @@ main {
     height: auto;
     border-radius: 2%;
     border: 0.18em solid rgb(76, 48, 104);
-   
+    margin: 0.3em;
     z-index: 5;
     opacity: 1;
 
@@ -83,7 +83,7 @@ main {
     align-items: center;
     width: 45%;
     height: 30%;
-    background-color: rgba(80, 60, 192, 0.76);
+    background-color:rgba(155, 65, 182, 0.76);
     color: rgb(0, 0, 0);
     font-family: monospace;
     font-size: 30px;
@@ -95,26 +95,57 @@ main {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    height: 15%;
+    height: 25%;
     display: flex;
     color: rgb(0, 0, 0);
     font-family: monospace;
     font-size: 16px;
+    background-color: rgba(141, 60, 216, 0.089);
+    border: 0.15em solid rgba(143, 79, 204, 0.233);
+    border-radius: 0.8em;
    
+}
+.block-janr {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .janr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
-    height: 9%;
+    width:auto;
+    height: 80%;
+    margin: 9.6px;
 }
 .nuber-of-episodes {
-    width: 100%;
-    height: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: 80%;
     color: rgb(0, 0, 0);
-    font-family: monospace;
     font-size: 16px;
+    margin: 0.6em;
+    
+}
+.number-of-episodes-h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+.number-of-episodes-text {
+    display: flex;
+    align-items: center;
+}
+.contry-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: 80%;
     margin: 0.6em;
 }
 .stars-text {
@@ -123,26 +154,28 @@ main {
 .stars-name {
     width: 100%;
     height: 40%;
+    margin: 0.2em;
 }
 .stars {
     width: 100%;
-    height: 80%;
+    height: 85%;
     font-size: 13px;
     margin: 0.2em;
 }
 .stars-img {
     margin: 1em;
     width: 70%;
-    height: 50%;
-    background-color: rgba(106, 16, 129, 0.596);
-    border: 0.2em solid rgb(112, 31, 92);
+    height: 60%;
+    /*background-color: rgba(151, 38, 179, 0);
+    border: 0.2em solid rgba(153, 50, 127, 0.61);*/
     border-radius: 0.6em;
 }
 .stars-img-1 {
     width: auto;
     height: auto;
     border-radius: 0.5em;
-    display: flex;
+    
+
     
 }
 .stars-img-1-1 {
@@ -152,7 +185,7 @@ main {
 }
 .block-scroll-main {
     display: flex;
-    background-color: rgb(116, 21, 21);
+    
     width: 100%;
     height: 5%;
     overflow-x: auto;
@@ -166,7 +199,7 @@ main {
 }
 .block-scroll {
     display: flex;
-    background-color: rgba(114, 23, 126, 0.664);
+    
     width: max-content;
     height: 100%;
     border-radius: 0.4em;
@@ -201,21 +234,24 @@ main {
 @media only screen and (max-width:415px) {
 
     main {
-        width: 85%;
+        width: 80%;
     }
     .name {
         width: 100%;
+        height: auto;
     }
     .name-name {
         font-size: 15px;
     }
     
     .stars-img {
-        width: 100%;
+        width:  auto;
+        height: auto;
         
     }
     .stars-img-1 {
-        width: 100%;
+        width: auto;
+        height: auto;
         margin: 0.3em;
         border-radius: 0.2em;
     }
