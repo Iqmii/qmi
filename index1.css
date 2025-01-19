@@ -271,6 +271,8 @@ main {
     height: 100%;
     border-radius: 0.4em;
     box-shadow: 10px 10px 10px rgba(102, 51, 153, 0.555);
+    animation: scroll 80s linear infinite;
+    animation-play-state: running;
     
     
     
@@ -283,7 +285,7 @@ main {
 
     
 }
-.scroll-img{
+.item{
    display: flex;
     width: auto;
     height: 95%;
@@ -295,7 +297,14 @@ main {
     cursor: grabbing;
 }
 
-
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 
 @media only screen and (max-width:415px) {
@@ -364,5 +373,13 @@ main {
       width: 170px;
       height: 300px;
       overflow: hidden;
+    }
+    #stars-list {
+        height: 20%;
+        font-weight: 550;
+    }
+    #stars-img {
+        height: 80%;
+        border-radius: 0.6em;
     }
 } 
