@@ -353,8 +353,16 @@ main {
         overflow: hidden;
     }
     .stars-img-1-1 {
-        max-width: 100%;
-        height: auto;
+        display: flex;
+        align-items: center;
+        width: 170px;;
+        height: 300px;
         object-fit: cover;
+
+    }
+    #stars {
+      width: 170px;
+      height: 300px;
+      overflow: hidden;
     }
 } 
