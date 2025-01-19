@@ -95,12 +95,12 @@ main {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    height: 25%;
+    height: auto;
     display: flex;
     color: rgb(0, 0, 0);
     font-family: monospace;
     font-size: 16px;
-    background-color: rgba(141, 60, 216, 0.089);
+    background-color: rgb(255, 255, 255);
     border: 0.15em solid rgba(143, 79, 204, 0.233);
     border-radius: 0.8em;
    
@@ -169,6 +169,7 @@ main {
     width: 60%;
 }
 .subtitels-block {
+    width: 98%;
     display: flex; 
     align-items: center;
     flex-direction: column;
@@ -176,7 +177,23 @@ main {
 .subtitels-name {
    margin: 0.2em;
 }
+.subtitels-block-name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
+.description-block-2{
+    width: 98%;
+    height: auto;
+    margin: 0.6em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.description-block-text {
+   height: auto;
+}
 .stars-text {
     margin: 0.2em;
 }
@@ -186,10 +203,30 @@ main {
     margin: 0.2em;
 }
 .stars {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 85%;
     font-size: 13px;
     margin: 0.2em;
+}
+.stars-block-left {
+    display: flex;
+    
+    width: 48%;
+    margin: 1%;
+}
+.stars-block-left-block{
+
+}
+.stars-block-rechts {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin: 1%;
+}
+.stars-block-rechts-block {
+    width: 1005;
 }
 .stars-img {
     margin: 1em;
@@ -211,12 +248,13 @@ main {
     display: flex;
     justify-content: center;
     align-content: center;
+    overflow: hidden;
 }
 .block-scroll-main {
     display: flex;
     
     width: 100%;
-    height: 5%;
+    height: 15%;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -263,7 +301,7 @@ main {
 @media only screen and (max-width:415px) {
 
     main {
-        width: 80%;
+        width: 95%;
     }
     .name {
         width: 100%;
@@ -273,22 +311,12 @@ main {
         font-size: 13px;
     }
     .description {
-        height: 30%;
+        width: 94%;
+        height: auto;
         
     }
     
-    .stars-img {
-        width:  auto;
-        height: auto;
-        
-    }
-    .stars-img-1 {
-        width: auto;
-        height: auto;
-        margin: 0.3em;
-        border-radius: 0.2em;
-    }
-    .block-scroll-main {
+    .lock-scroll-main {
         height: 3.5%;
     }
     .janr {
@@ -308,19 +336,10 @@ main {
     .nuber-of-episodes-block {
         font-size: 8px;
     }
-    .stars-img-1-1 {
-        overflow: hidden;
-
+    .description-block-2 {
+       font-size: 10px;
+    }
     
-    }
-    .stars-img-1 {
-        width: auto;
-        height: auto;
-    }
-    .stars-name {
-        overflow: hidden;
-        height: auto;
-    }
     .language-block1 {
         font-size: 10px;
     }
@@ -329,5 +348,13 @@ main {
     }
     .stars {
         font-size: 10px;
+    }
+    .stars-block-left {
+        overflow: hidden;
+    }
+    .stars-img-1-1 {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 } 
