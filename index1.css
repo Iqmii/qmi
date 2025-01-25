@@ -386,7 +386,11 @@ main {
     }
     .janr {
         height: 80%;
+        
         margin: 0.6em;
+    }
+    .janrrr {
+        font-size: 12px;
     }
     .block-janr {
         display: flex;
@@ -400,6 +404,17 @@ main {
     }
     .nuber-of-episodes-block {
         font-size: 8px;
+    }
+    .number-of-episodes-a, 
+    .number-of-episodes-div-2, 
+    .nuber-of-episodes-div-3 {
+        font-size: 12px;
+    }
+    .contry-block-name {
+        font-size: 12px;
+    }
+    #contry-name {
+        font-size: 12px;
     }
     .description-block-2 {
        font-size: 10px;
@@ -432,6 +447,7 @@ main {
     }
     #stars-list {
         height: 20%;
+        font-size: 8px;
         font-weight: 550;
     }
     #stars-img {
