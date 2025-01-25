@@ -5,57 +5,37 @@ let isDragging = false;
 let startX;
 let scrollLeft;
 
-scroll.addEventListener('mousedown', (e) => {
+function startDrag(e) {
     isDragging = true;
-    startX = e.pageX - scroll.offsetLeft;
+    const pageX = e.pageX || e.touches[0].pageX;
+    startX = pageX - scroll.offsetLeft;
     scrollLeft = scroll.scrollLeft;
-    scroll.style.cursor = 'grabing';
+    scroll.style.cursor = 'grabbing';
 
-});
+}
 
-
-scroll.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    startX = e.touches[0].pageX - scroll.offsetLeft;
-    scrollLeft = scroll.scrollLeft;
-});
-
-scroll.addEventListener('mousemove', (e) => {
+function dragMove(e) {
     if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - scroll.offsetLeft;
+    const pageX = e.pageX || e.touches[0].pageX;
+    const x = pageX -scroll.offsetLeft;
     const walk = (x - startX) * 1.5;
-    scroll.offsetLeft = scrollLeft - walk;
+    scroll.scrollLeft = scroll.scrollLeft - walk;
 
-} );
-
-scroll.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    const x = e.touches[0].pageX - scroll.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    scroll.offsetLeft = scrollLeft - walk;
-    
-} );
-
-
-
-scroll.addEventListener('mouseup', () => {
+}
+function stopDrag() {
     isDragging = false;
-    scroll.style.cursor = 'grab';
+    scrollContainer.style.cursor = 'grab';
+}
 
-});
+scroll.addEventListener('mousedown', startDrag);
+scroll.addEventListener('touchstart', startDrag);
+scroll.addEventListener('mousemove', dragMove);
+scroll.addEventListener('touchmove', dragMove);
+scroll.addEventListener('mouseup', stopDrag);
+scroll.addEventListener('touchend', stopDrag);
+scroll.addEventListener('mouseleave', stopDrag);
 
 
-scroll.addEventListener('mouseleave', () => {
-    isDragging = false;
-    scroll.style.cursor = 'grab';
-});
-
-scroll.addEventListener('touchend', () => {
-    isDragging = false;
-  
-
-});
 
 const scrollContainer = document.querySelector('.block-scroll-main');
 
@@ -76,17 +56,18 @@ scrollContainer.addEventListener('mouseleave', () => {
 
 const scrollContent = document.querySelector('.block-scroll');
 
-scrollContainer.addEventListener('scroll', () => {
-    const scrollWidth = scrollContent.scrollWidth;
-    const scrollLeft = scrollContainer.scrollLeft;
-    const containerWidth = scrollContainer.clientWidth;
 
-    if (scrollLeft + containerWidth >= scrollWidth - 90) {
-        const items = scrollContent.querySelectorAll('.item');
-        items.forEach((item) => {
-            const clone = item.cloneNode(true);
-            scrollContent.appendChild(clone);
-        });
+
+
+scrollContainer.addEventListener('scroll', () => {
+    const items = scrollContent.querySelectorAll('.item');
+    const lastItem = items[items.length - 1];
+    const rect = lastItem.getBoundingClientRect();
+    const containerRect = scrollContainer.getBoundingClientRect();
+
+    if (rect.left + rect.width / 2 <= containerRect.right){
+        const clones = Array.from(items).map((item) => item.cloneNode (true));
+        clones.forEach((clone) => scrollContent.appendChild(clone));
     }
-} );
-console.log(`scrollLeft: ${scrollLeft}, scrollWidth: ${scrollWidth}, containerWidth: ${containerWidth}`);
+})
+
