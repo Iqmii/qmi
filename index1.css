@@ -3,12 +3,109 @@
   
 }
 body {
+    display: flex;
+}
+.blockNeutral {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 4%;
+    height: 6%;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0.4em;
+    border-radius: 0.4em;
+    border: 0;
+    z-index: 99;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.blockNeutralPanel {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 7%;
+    border-radius: 0.2em;
+    background-color: black;
+    margin: 0.18em;
+}
+.mainPanel {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+.mainPanelBlock {
+    opacity: 1;
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    box-sizing: border-box;
+
+}
+#mainPanelBlock {
+    display: flex;
+}
+
+.blockRegistr {
+    background-color: rgb(255, 247, 255);
+    display: flex;
+    position: fixed;
+    width: 40%;
+    height: 100vh;
+    z-index: 3;
+    border-radius: 1em;
+    
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(-100%);
+    
+}
+.blockRegistr.open {
+   animation: slideIn 0.2s forwards;
+}
+.blockRegistrPanel {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    
+    flex-direction: column;
+    margin: 7%;
+    margin-bottom: 1%;
+    
+
+}
+.registr {
+    display: flex;
+    background-color: rgb(251, 239, 252);
+    /*border: 0.06em  solid gray;*/
+    width: 50%;
+    height: 100%;
+    margin-top:5%;
+    font-size: 20px;
+    border-radius: 0.3em;
+   
+}
+.registrBlock {
+    display: flex;
+    margin: 3%;
+}
+.meinBlock {
     
     width: 100%;
     height: 300em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 main {
@@ -353,6 +450,40 @@ main {
     cursor: grabbing;
 }
 
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+#userName {
+    width: 50%;
+    height: 3%;
+    margin: 1em;
+    border-radius: 0.3em;
+
+}
+#commentText {
+    width: 50%;
+    height: 40%;
+    margin: 1em;
+    border-radius: 0.3em;
+}
+#sumit {
+    width: 30%;
+    height: 50%;
+    margin: 1em;
+    border-radius: 0.2em;
+}
+#comments-block {
+    width: 100%;
+    height: 50%;
+}
+#comments {
+   height: 100%;
+}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -361,10 +492,20 @@ main {
         transform: translateX(-100%);
     }
 }
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 
 
 @media only screen and (max-width:415px) {
-
+    .blockRegistr {
+        height: 100vh;
+    }
     main {
         width: 95%;
     }
