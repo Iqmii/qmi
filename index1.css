@@ -503,8 +503,23 @@ main {
 
 
 @media only screen and (max-width:415px) {
+    .blockNeutral {
+       width: 10vw; 
+    }
+    .mainPanelBlock {
+        width: 97vw;
+    }
     .blockRegistr {
+        width: 60vw;
         height: 100vh;
+
+    }
+    .registrBlock {
+        margin-top: 1.2em;
+    }
+    .registr {
+        margin-top: 1.5em;
+        width: auto;
     }
     main {
         width: 95%;
