@@ -10,7 +10,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  
+  <div class="mainPanel">
+    <button id="neutralBlock" class="blockNeutral">
+      <div class="panel">
+       <div class="blockNeutralPanel"></div>
+       <div class="blockNeutralPanel"></div>
+       <div class="blockNeutralPanel"></div>
+      </div>
+     </button>
+    <div id="mainPanelBlock" class="mainPanelBlock" >
+      <div id="blockRegistr" class="blockRegistr">
+        <div class="blockRegistrPanel">
+          <div class="registr"> 
+            <div class="registrBlock">
+            Зареєструватися
+            </div>
+            <div>
+            <div class="descriptionPanel"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <mainMain class="meinBlock">
+  
     <main>
     
     
@@ -184,8 +207,20 @@
 
         </div>
       </div>
-    </main>
+      <form id="commentForm">
+        <input type="text" id="userName" placeholder="Ваше імя" required>
+        <textarea id="commentText" placeholder="Ваш коментар" required></textarea>
+        <input type="hidden" id="postId" value="1">
+        <button type="submit">Додати коментар</button>
+        <div id="comments-block">
+          <a id="comments"></a>
+        </div>
+      </form>
+      
 
-    <script src="index1.js"></script>
+    </main>
+  </mainMain>
+    <script src="index1.js" defer></script>
+    <script src="index11.js"></script>
 </body>
 </html>
