@@ -16,7 +16,7 @@ document.getElementById('registerForm').addEventListener('submit', async (event)
           'Content-Type': 'application/json'
         }
       });
-      window.location.href = '/registration/registrationCode/registrationCode.html';
+      window.location.href = 'registrationCode.html';
     } catch (err) {
       console.error("Помилка в try:", err);
       return; // Можна завершити функцію, якщо fetch не спрацював
