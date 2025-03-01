@@ -12,7 +12,7 @@
      justify-content: center;
      width: 4%;
      height: 6%;
-     background-color: rgba(255, 255, 255, 0);
+     background-color: rgb(255, 255, 255);
      margin: 0.4em;
      border-radius: 0.4em;
      border: 0;
@@ -618,3 +618,90 @@
          border-radius: 0.6em;
      }
  } 
+
+ @media only screen  and (min-width:1300px) and (max-width:1500px) {
+    .blockNeutral {
+        width: 4%;
+    }
+    
+ }
+ 
+ @media only screen  and (min-width:1100px) and (max-width:1300px) {
+    .blockNeutral {
+        width: 5.5%;
+    }
+    
+ }
+
+
+ @media only screen  and (min-width:900px) and (max-width:1100px) {
+    .blockNeutral {
+        width: 5.5%;
+    }
+    
+ }
+
+
+ 
+ @media only screen  and (min-width:800px) and (max-width:900px) {
+    .blockNeutral {
+        width: 6%;
+    }
+    
+ }
+
+
+
+ @media only screen  and (min-width:700px) and (max-width:800px) {
+    .blockNeutral {
+        width: 7%;
+    }
+    
+ }
+
+
+
+
+ @media only screen  and (min-width:600px) and (max-width:700px) {
+    .blockNeutral {
+        width: 7.5%;
+    }
+    
+ }
+
+
+ @media only screen  and (min-width:600px) and (max-width:700px) {
+    .blockNeutral {
+        width: 8%;
+    }
+    
+ }
+
+
+
+ 
+ @media only screen  and (min-width:500px) and (max-width:600px) {
+    .blockNeutral {
+        width: 8.6%;
+    }
+    
+ }
+
+
+ 
+ @media only screen  and (min-width:400px) and (max-width:500px) {
+    .blockNeutral {
+        width: 11%;
+    }
+    
+ }
+ 
+ 
+ 
+ @media only screen  and (min-width:100px) and (max-width:400px) {
+    .blockNeutral {
+        width: 15%;
+    }
+    
+ }
+ 
