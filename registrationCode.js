@@ -18,14 +18,16 @@ document.getElementById('registerForm').addEventListener('submit', async (event)
     .then(res => res.json())
 .then(data => {
   if (data.redirectUrl) {
-    window.location.href = data.redirectUrl;
+    sessionStorage.setItem('registrationSuccess', 'true');
+    window.location.href = '/main';
+    console.log('registrationCode, str. 22')
   }
 })
   } catch (err) {
     console.error("Помилка в try:", err);
   }
 });
-
+console.log('29 registr')
 
 
 
