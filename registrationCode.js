@@ -19,7 +19,7 @@ document.getElementById('registerForm').addEventListener('submit', async (event)
 .then(data => {
   if (data.redirectUrl) {
     sessionStorage.setItem('registrationSuccess', 'true');
-    window.location.href = '/main';
+    window.location.href = '/';
     console.log('registrationCode, str. 22')
   }
 })
