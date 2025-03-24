@@ -1,802 +1,294 @@
+/* Загальні налаштування */
 * {
-   
     margin: 0;
-   padding: 0;
- }
- body {
-    
-     display: flex;
-     width: 100vw;
-     height: 5000px;;
-     overflow-x: hidden;
-    
-
- }
- 
-
- main {
-    
-    
-    background-color: rgba(153, 97, 202, 0.171);
-     
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     display: flex;
-     flex-direction: column;
-     align-items: center;
-     width: 93%;
-     height: 9000px;
-     margin-top: 4em;
-     border-radius: 1em;
-     overflow-x: hidden;
-     overflow: hidden;
- }
- .blockNeutral {
-     position: fixed;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     width: 4%;
-     height: 6%;
-     background-color: rgb(255, 255, 255);
-     margin: 0.4em;
-     border-radius: 0.4em;
-     border: 0;
-     z-index: 99;
- }
- 
- .panel {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-     height: 100%;
- }
-
-
- .blockNeutral:hover {
-   background-color: rgb(221, 173, 255);
- }
- .blockNeutralPanel {
-     display: flex;
-     flex-direction: column;
-     width: 80%;
-     height: 7%;
-     border-radius: 0.2em;
-     background-color: black;
-     margin: 0.18em;
- }
- .mainPanel {
-     display: flex;
-     position: absolute;
-     z-index: 1;
- }
- .mainPanelBlock {
-     opacity: 1;
-     display: flex;
-     position: relative;
-     width: auto;
-
-     height: auto;
-     z-index: 2;
-     box-sizing: border-box;
- 
- }
- #mainPanelBlock {
-     display: flex;
- }
- 
- .blockRegistr {
-     background-color: rgb(255, 247, 255);
-     display: flex;
-     position: fixed;
-     width: 20%;
-     height: 100vh;
-     z-index: 3;
-     border-radius: 1em;
-     
-     flex-direction: column;
-     opacity: 0;
-     transform: translateX(-100%);
-     
- }
- .blockRegistr.open {
-    animation: slideIn 0.2s forwards;
- }
- .blockRegistrPanel {
-     display: flex;
-     width: 80%;
-     height: 100%;
-     
-     flex-direction: column;
-     margin: 7%;
-     margin-bottom: 1%;
-     
- 
- }
- .registr {
-     display: flex;
-     background-color: rgb(251, 239, 252);
-     /*border: 0.06em  solid gray;*/
-     width: 95%;
-     height: 100%;
-     margin-top:15%;
-     font-size: 20px;
-     border-radius: 0.3em;
-    
- }
- .registrBlock {
-     display: flex;
-     width: 100%;
-     height: 5%;
-     margin: 3%;
- 
- }
- .registrButton {
-     border: 0;
-     background-color: rgb(207, 144, 212);
-     border-radius: 15px;
-     width: 100%;
-     height: 55%;
-
- }
- .registrButton:hover {
-    background-color: rgb(218, 181, 253);
- }
- .meinBlock {
-     
-     width: 100%;
-     height: 300em;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     
- }
- 
-
- 
- .img {
- 
-     display: flex;
-     justify-content: center;
-     align-items:center ;
-     width: 100%;
-     height: auto;
-     box-sizing: border-box;
-     overflow: hidden;
-     
-   
- }
- .img-block {
-     width: 100%;
-     height: 100%;
-     background-image: url();
-     display: flex;
-     justify-content: center;
-     align-items:center ;
-     width: 100%;
-     height: 100%;
-     background-repeat: no-repeat;
-     background-size: 100%;
-     background-position: center;
-     box-sizing: border-box;
-     overflow: hidden;
-     z-index: -1;
-   
- }
- 
- .image {
-     background-image: url(https://i.pinimg.com/736x/8f/af/0e/8faf0ee7ac2252c9f2e4df1155e54f34.jpg);
-     opacity: 0.4;
-     background-repeat: no-repeat;
-     background-size:cover;
-     width: 50%;
-     height: auto;
-     border-radius: 2%;
-     border: 0.18em solid rgb(76, 48, 104);
-     margin: 0.3em;
-     z-index: 5;
-     opacity: 1;
- 
- 
- }
- .name {
- 
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-     height: 2%;
-   
- 
- }
- .name-name {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 45%;
-     height: 30%;
-    /* background-color:rgba(173, 129, 187, 0.76); 
-     color: rgb(0, 0, 0); */
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     font-size: 45px;
-    /* border-radius: 0.4em;
-     box-shadow: 10% color(srgb rgb(192, 68, 68) green blue);*/
- }
- .description {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     width: 80%;
-     height: auto;
-     display: flex;
-     color: rgb(0, 0, 0);
-     font-family: monospace;
-     font-size: 16px;
-     background-color: rgb(255, 255, 255);
-     border: 0.15em solid rgba(143, 79, 204, 0.233);
-     border-radius: 0.8em;
-    
- }
- .block-janr {
-     width: 100%;
-     height: 10%;
-     display: flex;
-     
-     justify-content: center;
- }
- .janr {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     width:auto;
-     height: 80%;
-     margin: 2em;
- }
- .nuber-of-episodes {
-     display: flex;
-     
-     flex-direction: column;
-     width: auto;
-     height: 80%;
-     color: rgb(0, 0, 0);
-     font-size: 16px;
-     margin: 2em;
-     
- }
- .number-of-episodes-h2 {
-     display: flex;
-     flex-direction: column;
-     font-size: 24px;
- }
- .number-of-episodes-text {
-     display: flex;
-     align-items: center;
- }
- .contry-block {
-     display: flex;
-     
-     flex-direction: column;
-     width: auto;
-     height: 80%;
-     margin: 2em;
- }
- .contry-block-block {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
- }
- #contry-name {
-     font-size: 20px;
-   
-     margin: 0.6em;
-     
- }
- #position-center {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
- }
- .language-block {
-     width: auto;
-     height: auto;
-     display: flex;
-     align-items: center;
-     flex-direction: column;
- }
- .language-block1 {
-     width: 100%;
-     height: 205;
-     display: flex;
-     align-items: center;
-     flex-direction: column;
- }
- .language {
-     display: flex;
-     align-items: center;
-     flex-direction: column;
-     width: 60%;
- }
- .subtitels-block {
-     width: 98%;
-     display: flex; 
-     align-items: center;
-     flex-direction: column;
- }
- .subtitels-name {
-    margin: 0.2em;
- }
- .subtitels-block-name {
-     display: flex;
-     align-items: center;
-     flex-direction: column;
- }
- 
- .description-block-2{
-     width: 98%;
-     height: auto;
-     margin: 0.6em;
-     display: flex;
-     align-items: center;
-     flex-direction: column;
- }
- .description-block-text {
-    height: auto;
- }
- .stars-text {
-     margin: 0.2em;
- }
- .stars-name {
-     width: 100%;
-     height: 40%;
-     margin: 0.2em;
- }
- .stars {
-     display: flex;
-     flex-direction: row;
-     width: 100%;
-     height: 85%;
-     font-size: 13px;
-     margin: 0.2em;
- }
- .stars-block-left {
-     display: flex;
-     flex-direction: column;
-     width: 48%;
-     height: 100%;
-     margin: 1%;
- }
- 
- .stars-block-rechts {
-     display: flex;
-     flex-direction: column;
-     width: 48%;
-     height: 100%;
-     margin: 1%;
- }
- .stars-block-left-block {
-     height: 100%;
- }
- .stars-block-rechts-block {
-     height: 100%;
- }
- .stars-list {
-     width: 80%;
- }
- .stars-img {
-     margin: 1em;
-     width: 70%;
-     height: 60%;
-     border-radius: 0.6em;
- }
- .stars-img-1 {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border-radius: 0.5em;
-    
-     
-     
- 
-     
- }
- .stars-img-1-1 {
-     display: flex;
-     
- 
-     justify-content: center;
-     align-content: center;
-     overflow: hidden;
-     
- }
- 
- 
- #stars-list {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-    
-     font-size: 16px;
-     font-weight: 549;
-     
- }
- #stars-img {
-     width: 240px;;
-     height: 360px;
-     overflow: hidden;
-     
- }
- #stars {
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 19.5%;
-    overflow: hidden;
-    border: 1.5px solid rgba(0, 0, 0, 0.103);
-    border-radius: 0.2em;
-    margin: 0.1em;
- 
- 
- 
- }
- 
- .block-scroll-main {
-    position: relative;
-     display: flex;
-     width: 100vw;
-     height: 7%;
-     
-     overflow-x: hidden;
-     overflow-y: hidden; 
-     white-space: nowrap;
-     scrollbar-width: none;
-     -ms-overflow-style: none;
+    background-color: #000;
+    font-family: 'Shantell Sans', sans-serif;
+    height: 1000em;
+  }
+  
+
+.cPanel {
+  width: 100%;
+  height: 1.5%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.panelBlock {
+ width:80% ;
+ height: 80%;
+
+ display: flex;
+
+ align-items: center;
+ background-color: #212121;
+ border-radius: 1em;
+}
+
+#panelTeil {
+  height: 100%;
+  width: 5%;
+}
+
+.neutralBlock {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
 
  
-     
  
- }
- .block-scroll {
-     display: flex;
-     position: absolute;
-     width: auto;
-     height: 100%;
-     border-radius: 0.4em;
-    
-     animation: scroll 80s linear infinite;
-     animation-play-state: running;
-    
-     z-index: 999;
-     overflow: hidden;
-     
- 
-     
- }
- .scroll {
-     flex: 0 0 auto;
- 
- 
-     
- }
- .item{
+  
+  
+  
+  /* Панель реєстрації */
+  .blockRegistr {
+    background-color: rgb(235, 215, 235);
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    z-index: 3;
+    border-radius: 1em;
     display: flex;
-     width: auto;
-     height: 95%;
-     margin: 0.3em;
-     border-radius: 0.4em;
- }
- .scroll:active {
-     cursor: grabbing;
- }
-
-.commentFormSubmit {
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  .blockRegistr.open {
+    animation: slideIn 0.2s forwards;
+  }
+  
+  .blockRegistrPanel {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 7% 0 1%;
+  }
+  
+  .registr {
+    width: 95%;
+    height: 100%;
+    margin-top: 15%;
+    font-size: 20px;
+    border-radius: 0.3em;
+    background-color: rgb(251, 239, 252);
+  }
+  
+  .registrBlock {
+    width: 100%;
+    height: 5%;
+    margin: 3%;
+  }
+  
+  .registrButton {
+    border: none;
+    background-color: rgb(207, 144, 212);
+    border-radius: 15px;
+    width: 100%;
+    height: 55%;
+  }
+  
+  .registrButton:hover {
+    background-color: rgb(218, 181, 253);
+  }
+  
+  /* Контейнер основного вмісту */
+  .scrollContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Основний блок */
+  .meinBlock {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+  
+  /* Блок зображення */
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2%;
+    border: 0.18em solid rgb(76, 48, 104);
+  }
+  
+  /* Заголовок */
+  .name {
+    text-align: center;
+    margin: 1em 0;
+    color: beige;
+  }
+  
+  .name-name {
+    font-size: 45px;
+    text-align: center;
+  }
+  
+  /* Блок опису */
+  .description {
+    background-color: #000;
+    border: 1px solid rgba(143, 79, 204, 0.233);
+    border-radius: 0.8em;
+    color: aliceblue;
+    font-size: 16px;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+  
+  /* Додаткові блоки всередині опису */
+  .block-janr, .nuber-of-episodes, .contry-block {
+    margin-bottom: 1em;
+  }
+  
+  .block-janr .janr ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .language-block, .subtitels-block {
+    margin-bottom: 1em;
+  }
+  
+  .subtitels-block p {
+    margin-top: 0.5em;
+  }
+  
+  /* Галерея з зображеннями */
+  .block-scroll-main {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 2em;
+    height: 300px; /* Фіксована висота галереї, змініть за потребою */
+  }
+  
+  .block-scroll {
+    display: flex;
+    gap: 1em;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .scroll {
+    flex: 0 0 auto;
+  }
+  
+  .item {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    border-radius: 0.4em;
+  }
+  
+  /* Форма коментарів */
+  #commentForm {
+    width: 100%;
+    max-width: 600px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #commentText {
+    width: 90%;
+    padding: 1em;
+    border-radius: 1em;
+    border: 1px solid rgb(217, 134, 255);
+    background-color: rgb(250, 244, 255);
+    margin-bottom: 1em;
+  }
+  
+  .commentFormSubmit {
     background-color: rgb(177, 112, 239);
     width: 90%;
-    height: 2.5%;
+    padding: 0.5em;
     border-radius: 1em;
-    border: 0;
-}
- 
- #commentForm {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     width: 100%;
-     height: 20%;
- }
- #userName {
-     width: 50%;
-     height: 3%;
-     margin: 1em;
-     border-radius: 0.3em;
- 
- }
- #commentText {
- background-color: rgb(250, 244, 255);
-
-     width: 90%;
-     height: 40%;
-     margin: 1em;
-     border-radius: 1em;
-     border: 0.01em solid  rgb(217, 134, 255);
- }
- #sumit {
-
-
-     width: 90%;
-     height: 50%;
-     margin: 1em;
-     border-radius: 0.2em;
- }
- #comments-block {
-     width: 100%;
-     height: 25%;
- }
- #comments {
+    border: none;
+    margin-bottom: 1em;
+  }
+  
+  #comments-block {
+    width: 100%;
+    padding: 1em;
+  }
+  
+  /* Анімації (за потребою) */
+  @keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+/* Обгортка галереї */
+.block-scroll-main {
+    width: 100%;
+    height: 20vh;              /* Фіксована висота галереї */
+    overflow: hidden;
+    position: relative;
+    margin-top: 1em;
+    cursor: grab;
+  }
+  
+  /* Контейнер із зображеннями, який буде анімовано */
+  .block-scroll {
+    display: flex;
+    /* Ширина "max-content" дозволяє контейнеру розтягуватися на сумарну ширину всіх блоків */
+    width: max-content;
+    animation: scrollAnimation 20s linear infinite; /* Анімація запускається автоматично */
+  
+  }
+  
+  /* Клас для запуску анімації */
+  .auto-scroll {
+    animation: scrollAnimation 60s linear infinite;
+  }
+  
+  /* Ключові кадри анімації: переміщення блоку вліво на 50% його ширини */
+  @keyframes scrollAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Елементи галереї */
+  .scroll {
+    flex: 0 0 auto;
+    margin-right: 1em;
     height: 100%;
- }
- 
- @keyframes scroll {
-     0% {
-         transform: translateX(0);
-     }
-     100% {
-         transform: translateX(-100%);
-     }
- }
- @keyframes slideIn {
-     from {
-         transform: translateX(-100%);
-     }
-     to {
-         transform: translateX(0);
-     }
- }
- 
- 
- @media only screen and (max-width:415px) {
-    .block-scroll-main {
-        
-         height: 4%;
-         
-     
-         
-     
-     }
-     .blockNeutral {
-        width: 10vw; 
-     }
-     .mainPanelBlock {
-         width: 97vw;
-     }
-     .blockRegistr {
-         width: 60vw;
-         height: 100vh;
- 
-     }
-     .registrBlock {
-         margin-top: 1.2em;
-     }
-     .registr {
-         margin-top: 1.5em;
-         width: auto;
-     }
-     main {
-         width: 95%;
-     }
-     .name {
-         width: 100%;
-         height: 1.2%;
-     }
-     .name-name {
-         font-size: 13px;
-     }
-     .description {
-         width: 94%;
-         height: auto;
-         
-     }
-     
-     .lock-scroll-main {
-         height: 3.5%;
-     }
-     .janr {
-         height: 80%;
-         
-         margin: 0.6em;
-     }
-     .janrrr {
-         font-size: 12px;
-     }
-     .block-janr {
-         display: flex;
-         align-items: center;
-         flex-direction: row;
-         height: 8%;
-         font-size: 8px;
-     }
-     .number-of-episodes-h2 {
-         font-size: 13px;
-     }
-     .nuber-of-episodes-block {
-         font-size: 8px;
-     }
-     .number-of-episodes-a, 
-     .number-of-episodes-div-2, 
-     .nuber-of-episodes-div-3 {
-         font-size: 12px;
-     }
-     .contry-block-name {
-         font-size: 12px;
-     }
-     #contry-name {
-         font-size: 12px;
-     }
-     .description-block-2 {
-        font-size: 10px;
-     }
-     
-     .language-block1 {
-         font-size: 10px;
-     }
-     .subtitels-block {
-         font-size: 10px;
-     }
-     .stars {
-         font-size: 10px;
-     }
-     .stars-block-left {
-         overflow: hidden;
-     }
-     .stars-img-1-1 {
-         display: flex;
-         align-items: center;
-         width: 170px;;
-         height: 300px;
-         object-fit: cover;
- 
-     }
-     #stars {
-       width: 170px;
-       height: 300px;
-       overflow: hidden;
-     }
-     #stars-list {
-         height: 20%;
-         font-size: 8px;
-         font-weight: 550;
-     }
-     #stars-img {
-         height: 80%;
-         border-radius: 0.6em;
-     }
- } 
-
- 
- @media only screen  and (min-width:1500px) and (max-width:1600px) {
-    .blockNeutral {
-        width: 4%;
-    }
-    .registr {
-        width: 95%;
-        margin-top: 25%;
-    }
-    
- }
-
- @media only screen  and (min-width:1300px) and (max-width:1500px) {
-    .blockNeutral {
-        width: 4%;
-    }
-    .registr {
-        width: 95%;
-        margin-top: 30%;
-    }
-    
- }
- 
- @media only screen  and (min-width:1100px) and (max-width:1300px) {
-    .blockNeutral {
-        width: 5.5%;
-    }
-    .registr {
-        margin-top: 10%;
-        margin-top: 35%;
-    }
- }
-
-
- @media only screen  and (min-width:900px) and (max-width:1100px) {
-    .blockNeutral {
-        width: 5.5%;
-    
-    }
-
-    .registr {
-        margin-top: 14%;
-        margin-top: 40%;
-    }
-    
- }
-
-
- 
- @media only screen  and (min-width:800px) and (max-width:900px) {
-    .blockNeutral {
-        width: 6%;
-    }
-    .registr {
-        margin-top: 16%;
-    }
-    
- }
-
-
-
- @media only screen  and (min-width:700px) and (max-width:800px) {
-    .blockNeutral {
-        width: 7%;
-    }
-    .registr {
-        margin-top: 18%;
-    }
- }
-
-
-
-
- @media only screen  and (min-width:600px) and (max-width:700px) {
-    .blockNeutral {
-        width: 7.5%;
-    }
-    .registr {
-        margin-top: 21%;
-    }
- }
-
-
- @media only screen  and (min-width:600px) and (max-width:700px) {
-    .blockNeutral {
-        width: 8%;
-    }
-    .registr {
-        margin-top: 25%;
-    }
- }
-
-
-
- 
- @media only screen  and (min-width:500px) and (max-width:600px) {
-    .blockNeutral {
-        width: 8.6%;
-    }
-    .registr {
-        margin-top: 30%;
-        width: 90%;
-    }
- }
-
-
- 
- @media only screen  and (min-width:400px) and (max-width:500px) {
-    .blockNeutral {
-        width: 11%;
-    }
-    .registr {
-        margin-top: 37%;
-        width: 90%;
-    }
- }
- 
- 
- 
- @media only screen  and (min-width:100px) and (max-width:400px) {
-    .blockNeutral {
-        width: 15%;
-    }
-    .registr {
-        margin-top: 37%;
-    }
- }
- 
-
+  }
+  
+  /* Зображення */
+  .item {
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+  
